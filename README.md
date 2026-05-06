@@ -37,8 +37,3 @@ bash run_llama2.sh 0 0.5 magnitude meta-llama/Llama-2-7b-hf 4 2:4
 
 For Ours:
 Set the algorithm name to `ours`.
-
-Example:
-```bash
-bash run_llama1.sh 0 0.5 ours facebook/opt-6.7b 4 unstructured
-```

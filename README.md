@@ -9,7 +9,7 @@ conda activate pruningqann
 pip install --upgrade pip
 pip install -e .
 ```
-For the LLaMA family, please install a compatible Transformers version:
+
 ```bash
 pip install transformers==4.31.0
 ```
@@ -19,7 +19,7 @@ pip install transformers==4.31.0
 * GPU ID
 * Sparsity ratio, choose from [0.5, 0.6, 0.7]
 * Algorithm name (e.g., magnitude)
-* Model path, e.g. meta-llama/Llama-2-7b-hf, facebook/opt-6.7b, etc.
+* Model path, e.g. meta-llama/Llama-2-7b-hf.
 * wbit (set to 4)
 * abit (set to 16)
 * unstructured

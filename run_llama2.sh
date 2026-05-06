@@ -1,6 +1,6 @@
 # W3A16
 export HF_ENDPOINT="https://hf-mirror.com"
-export HF_HOME="/home/public/shared_hf_cache"
+# export HF_HOME="/home/public/shared_hf_cache"
 gpu_no=$1
 sparsity_ratio=$2
 method=$3

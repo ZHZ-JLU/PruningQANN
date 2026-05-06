@@ -22,7 +22,7 @@ pip install transformers==4.31.0
 * Model path, e.g. meta-llama/Llama-2-7b-hf, facebook/opt-6.7b, etc.
 * wbit (set to 4)
 * abit (set to 16)
-* Sparsity pattern/method, choose unstructured
+* unstructured
 * rho only for ours
 
 For Baselines

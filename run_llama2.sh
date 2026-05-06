@@ -26,8 +26,7 @@ cmd="$cmd main.py \
 --sparsity_ratio $sparsity_ratio \
 --prune_method $method \
 --rho $rho \
---sparsity_type $sparsity_type \
---multigpu"
+--sparsity_type $sparsity_type"
 
 echo $cmd
 eval $cmd

@@ -7,8 +7,6 @@ method=$3
 model_name=$4
 wbits=$5
 abits=$6
-sparsity_type=$7
-rho=$8
 
 de=${de:-""}
 
@@ -25,8 +23,7 @@ cmd="$cmd main.py \
 --tasks arc_easy,arc_challenge,piqa,winogrande \
 --sparsity_ratio $sparsity_ratio \
 --prune_method $method \
---rho $rho \
---sparsity_type $sparsity_type"
+--sparsity_type unstructured"
 
 echo $cmd
 eval $cmd

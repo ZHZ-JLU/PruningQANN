@@ -22,14 +22,12 @@ pip install transformers==4.31.0
 * Model path, e.g. meta-llama/Llama-2-7b-hf.
 * wbit (set to 4)
 * abit (set to 16)
-* unstructured
-* rho only for ours
 
 For Baselines
 
 Example:
 ```bash
-bash run_llama2.sh 0 0.5 magnitude meta-llama/Llama-2-7b-hf 4 16 unstructured 1e-5
+bash run_llama2.sh 0 0.5 magnitude meta-llama/Llama-2-7b-hf 4 16
 ```
 
 For Ours:
@@ -37,5 +35,5 @@ Set the algorithm name to `ours`.
 
 Example:
 ```bash
-bash run_llama2.sh 0 0.5 ours meta-llama/Llama-2-7b-hf 4 16 unstructured 1e-5
+bash run_llama2.sh 0 0.5 ours meta-llama/Llama-2-7b-hf 4 16
 ```

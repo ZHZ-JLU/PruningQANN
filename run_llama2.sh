@@ -18,7 +18,7 @@ model_path=/home/public/shared_hf_cache/$model_name
 cmd="$cmd main.py \
 
 --model $model_name \
---epochs 0 --output_dir ./log/$method-$model_name-w$wbits-a$abits-$sparsity_type/ \
+--epochs 0 --output_dir ./log/$method-$model_name-w$wbits-a$abits/ \
 --eval_ppl --wbits $wbits --abits $abits \
 --tasks arc_easy,arc_challenge,piqa,winogrande \
 --sparsity_ratio $sparsity_ratio \

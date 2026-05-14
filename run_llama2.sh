@@ -22,8 +22,7 @@ cmd="$cmd main.py \
 --eval_ppl --wbits $wbits --abits $abits \
 --tasks arc_easy,arc_challenge,piqa,winogrande \
 --sparsity_ratio $sparsity_ratio \
---prune_method $method \
---sparsity_type unstructured"
+--prune_method $method"
 
 echo $cmd
 eval $cmd

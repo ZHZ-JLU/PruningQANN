@@ -96,18 +96,6 @@ def omniquant(
         model.model.embed_tokens = model.model.embed_tokens.to(dev)
         model.model.norm = model.model.norm.to(dev)
         layer_name_prefix = "model.layers"
-    elif "qwen" in args.net.lower():
-        is_llama = True
-        layers = model.model.layers
-        model.model.embed_tokens = model.model.embed_tokens.to(dev)
-        model.model.norm = model.model.norm.to(dev)
-        DecoderLayer = QuantQwenDecoderLayer
-        # pairs = {
-        #     "q_proj":"qkv",
-        #     "o_proj":"out",
-        #     "up_proj":"fc1"
-        # }
-        layer_name_prefix = "model.layers"
     else:
         raise ValueError("Only support for opt/llama/Llama-2/falcon/mixtral now")
     
@@ -166,9 +154,6 @@ def omniquant(
             model.model.decoder.project_in = model.model.decoder.project_in.cpu()
     elif 'falcon' in args.model:
         model.transformer.word_embeddings =  model.transformer.word_embeddings.cpu()
-    elif "qwen" in args.net.lower():
-        model.model.embed_tokens = model.model.embed_tokens.cpu()
-        model.model.norm = model.model.norm.cpu()
     else:
         raise ValueError("Only support for opt/llama/Llama-2/falcon/mixtral now")
     torch.cuda.empty_cache()

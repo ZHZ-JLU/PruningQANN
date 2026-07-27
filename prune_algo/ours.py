@@ -325,10 +325,6 @@ class ALPS_prune_ours:
                 if i_admm >= switch_iter and supp_change / k_spar < 0.0003:
                     break
             
-            # if i_admm%5 == 0 and i_admm!=0 and i_admm<=30:
-            #     print("here")
-            #     S = torch.diag(B.T @ self.XtX @ W) / torch.diag(B.T @ self.XtX @ B)
-
         if nm_n == 0:
             B_tmp = (X_norm * (B.T / X_norm).round().clamp(self.layer.weight_quantizer.qmin, self.layer.weight_quantizer.qmax)).T
             delta_B = B - B_tmp
